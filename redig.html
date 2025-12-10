@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Redireccionando...</title>
+    <script>
+        // Capturar datos de quién hizo clic
+        const params = new URLSearchParams(window.location.search);
+        const email = params.get('email') || 'desconocido';
+        const hora = new Date().toLocaleString();
+        
+        // Aquí podrías enviar estos datos a un Google Form
+        console.log(`Clic de: ${email} a las ${hora}`);
+        
+        // Redirigir después de 1 segundo
+        setTimeout(() => {
+            window.location.href = "https://segurityupdate-afk.github.io/hyplasa-phishing-test/index.html";
+        }, 1000);
+    </script>
+</head>
+<body>
+    <p>Verificando credenciales...</p>
+</body>
+</html>
