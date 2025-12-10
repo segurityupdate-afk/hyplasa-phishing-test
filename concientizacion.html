@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulación de Phishing - Educación en Seguridad</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e3f2fd 100%);
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .alert-header {
+            background: #d83b01;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .lesson-box {
+            background: #fff8e1;
+            border-left: 5px solid #ffc107;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .warning-item {
+            display: flex;
+            align-items: flex-start;
+            margin: 15px 0;
+            padding: 10px;
+            background: #f9f9f9;
+            border-radius: 8px;
+        }
+
+        .warning-icon {
+            background: #d83b01;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+            font-weight: bold;
+        }
+
+        .checklist {
+            background: #e8f5e9;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 25px 0;
+            border: 2px solid #4caf50;
+        }
+
+        .check-item {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            padding: 8px;
+        }
+
+        .check-icon {
+            color: #4caf50;
+            margin-right: 10px;
+            font-size: 20px;
+        }
+
+        .examples {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 25px 0;
+        }
+
+        .example-bad {
+            color: #d83b01;
+            font-weight: bold;
+        }
+
+        .example-good {
+            color: #2e7d32;
+            font-weight: bold;
+        }
+
+        .button {
+            background: #0072c6;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 10px 5px;
+            transition: all 0.3s;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            background: #005a9e;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 114, 198, 0.3);
+        }
+
+        .button-secondary {
+            background: #f5f5f5;
+            color: #333;
+            border: 2px solid #0072c6;
+        }
+
+        .button-secondary:hover {
+            background: #e0e0e0;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="alert-header">
+            <h1 style="margin: 0; font-size: 28px;">⚠ EJERCICIO DE CONCIENCIACIÓN EN SEGURIDAD</h1>
+            <p style="margin: 10px 0 0 0; opacity: 0.9;">Simulación controlada de phishing</p>
+        </div>
+
+        <p><strong>Has hecho clic en un correo de phishing simulado.</strong> Esta es una actividad controlada como parte de nuestro programa de formación en ciberseguridad.</p>
+        
+        <div style="background: #e8f5e9; padding: 15px; border-radius: 8px; border-left: 4px solid #4caf50; margin: 20px 0;">
+            ✅ <strong>Tu cuenta está segura.</strong> No se ha recolectado ni almacenado ninguna información personal.
+        </div>
+
+        <div class="lesson-box">
+            <h2 style="color: #d83b01; margin-top: 0;">📚 ¿QUÉ DEBÍAS VERIFICAR ANTES DE HACER CLIC?</h2>
+            <p>Estos son los elementos clave que debes revisar en cada correo sospechoso:</p>
+        </div>
+
+        <div class="checklist">
+            <h3 style="color: #2e7d32; margin-top: 0;">🔍 CHECKLIST DE SEGURIDAD PARA CORREOS</h3>
+
+            <div class="check-item">
+                <span class="check-icon">✓</span>
+                <span><strong>1. Dirección del remitente COMPLETA</strong></span>
+            </div>
+            <p style="margin-left: 30px; color: #555;">
+                No solo el nombre, haz clic en "Mostrar detalles" para ver la dirección completa.
+                <br><span class="example-bad">❌ Ejemplo:</span> security@outlook-alerts.verify
+                <br><span class="example-good">✅ Ejemplo:</span> support@microsoft.com
+            </p>
+
+            <div class="check-item">
+                <span class="check-icon">✓</span>
+                <span><strong>2. Dominio del enlace (URL)</strong></span>
+            </div>
+            <p style="margin-left: 30px; color: #555;">
+                Pasa el cursor SOBRE el enlace (sin hacer clic) para ver la dirección real.
+                <br><span class="example-bad">❌ Ejemplo:</span> password-update-m365-fake.com
+                <br><span class="example-good">✅ Ejemplo:</span> login.microsoftonline.com
+            </p>
+
+            <div class="check-item">
+                <span class="check-icon">✓</span>
+                <span><strong>3. Urgencia innecesaria</strong></span>
+            </div>
+            <p style="margin-left: 30px; color: #555;">
+                Desconfía de frases como "24 horas", "acción inmediata", "su cuenta será bloqueada".
+                Las empresas legítimas raramente usan tanta urgencia.
+            </p>
+
+            <div class="check-item">
+                <span class="check-icon">✓</span>
+                <span><strong>4. Errores gramaticales y ortográficos</strong></span>
+            </div>
+            <p style="margin-left: 30px; color: #555;">
+                Los correos oficiales de empresas profesionales están bien escritos.
+                Muchos phishing tienen errores en español o traducciones extrañas.
+            </p>
+
+            <div class="check-item">
+                <span class="check-icon">✓</span>
+                <span><strong>5. Pedido de información sensible</strong></span>
+            </div>
+            <p style="margin-left: 30px; color: #555;">
+                Microsoft, Google, tu banco, etc. <strong>NUNCA</strong> te pedirán tu contraseña por correo.
+                Las verificaciones reales se hacen dentro de las aplicaciones oficiales.
+            </p>
+        </div>
+
+        <div style="background: #fff3e0; padding: 25px; border-radius: 10px; margin: 25px 0;">
+            <h3 style="color: #ef6c00; margin-top: 0;">🛡️ ¿QUÉ HACER SI RECIBES PHISHING REAL?</h3>
+
+            <div class="warning-item">
+                <div class="warning-icon">1</div>
+                <div><strong>NO respondas</strong> al correo sospechoso</div>
+            </div>
+
+            <div class="warning-item">
+                <div class="warning-icon">2</div>
+                <div><strong>NO hagas clic</strong> en ningún enlace ni descargues archivos</div>
+            </div>
+
+            <div class="warning-item">
+                <div class="warning-icon">3</div>
+                <div><strong>Reporta inmediatamente</strong> al equipo de seguridad o TI</div>
+            </div>
+
+            <div class="warning-item">
+                <div class="warning-icon">4</div>
+                <div><strong>Borra el correo</strong> de tu bandeja de entrada</div>
+            </div>
+
+            <div class="warning-item">
+                <div class="warning-icon">5</div>
+                <div><strong>Si ya hiciste clic</strong>, cambia tu contraseña inmediatamente y reporta el incidente</div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin: 30px 0;">
+            <button class="button" onclick="window.close()">
+                🚪 Cerrar esta ventana
+            </button>
+
+        </div>
+
+        <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #e0e0e0;">
+            <p style="color: #666; font-size: 14px;">
+                <strong>Departamento de Sistemas - Hyplasa</strong><br>
+                Para reportar phishing real: cbalderas@hyplasa.com o d.muniz@hyplasa.com | Extensión: 555<br>
+                <span id="currentDate" style="color: #999; font-size: 12px;"></span>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Mostrar fecha actual
+        document.getElementById('currentDate').textContent = 
+            'Simulación realizada el ' + new Date().toLocaleDateString('es-ES', {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+        
+        // Enviar evento de Google Analytics
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'education_page_view', {
+                'page_title': 'Security Education',
+                'page_location': window.location.href,
+                'campaign': 'hyplasa_cpanel_phishing'
+            });
+        }
+        
+        console.log('Página de concientización cargada correctamente');
+    </script>
+</body>
+</html>
