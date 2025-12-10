@@ -1,88 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Redireccionando...</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 50px;
-            background: linear-gradient(135deg, #1a365d 0%, #2d4f8a 100%);
-            color: white;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 0;
-        }
-        .container {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 40px;
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            max-width: 500px;
-        }
-        .loader {
-            border: 4px solid rgba(255, 255, 255, 0.3);
-            border-radius: 50%;
-            border-top: 4px solid white;
-            width: 40px;
-            height: 40px;
-            animation: spin 1s linear infinite;
-            margin: 20px auto;
-        }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-    </style>
+    <title>Redireccionando</title>
 </head>
 <body>
-    <div class="container">
-        <h2>🔐 Verificación de Seguridad</h2>
-        <div class="loader"></div>
-        <p>Validando credenciales de <strong id="userEmail"></strong>...</p>
-        <p id="countdown">Redirigiendo en 3 segundos</p>
-        
-        <div style="margin-top: 30px; font-size: 12px; opacity: 0.8; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 15px;">
-            <p id="debugInfo"></p>
-        </div>
-    </div>
-
     <script>
-        // Capturar email de la URL
-        const urlParams = new URLSearchParams(window.location.search);
-        const email = urlParams.get('email');
-        let countdown = 3;
+        // Capturar email
+        const params = new URLSearchParams(window.location.search);
+        const email = params.get('email');
         
-        // Mostrar email
-        if(email) {
-            document.getElementById('userEmail').textContent = email;
-            document.getElementById('debugInfo').innerHTML = 
-                `Usuario: ${email}<br>Hora: ${new Date().toLocaleString()}`;
-            
-            // Guardar en consola
-            console.log('=== VERIFICACIÓN DE SEGURIDAD ===');
-            console.log('Usuario:', email);
-            console.log('Fecha:', new Date().toLocaleString());
-            console.log('URL:', window.location.href);
-            
-            // Opcional: Enviar a Google Forms o donde quieras
-            // fetch('https://tuservicio.com/track?email=' + encodeURIComponent(email));
+        // Registrar en consola
+        if (email) {
+            console.log("Usuario hizo clic:", email, new Date().toISOString());
         }
         
-        // Contador regresivo
-        const countdownElement = document.getElementById('countdown');
-        const timer = setInterval(() => {
-            countdown--;
-            countdownElement.textContent = `Redirigiendo en ${countdown} segundo${countdown !== 1 ? 's' : ''}`;
-            
-            if(countdown <= 0) {
-                clearInterval(timer);
-                window.location.href = "https://segurityupdate-afk.github.io/hyplasa-phishing-test/concientizacion.html";
-            }
-        }, 1000);
+        // Redirigir inmediatamente
+        window.location.href = "https://segurityupdate-afk.github.io/hyplasa-phishing-test/concientizacion.html";
     </script>
 </body>
 </html>
