@@ -238,10 +238,26 @@
             </div>
         </div>
 
-        <div style="text-align: center; margin: 30px 0;">
-            <button class="button" onclick="window.close()">
-                🚪 Cerrar esta ventana
-            </button>
+        <button class="button" onclick="finalizarEjercicio()">
+    🚪 Cerrar esta ventana
+</button>
+
+<script>
+function finalizarEjercicio() {
+    // Abrir Microsoft Forms
+    window.open(
+        'https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__qfmE6lURFMxQVVNVUhDVkhMUEdVTjE1QkZYSDRNWC4u&r82c26f01be8a4fe880ab2f311310c8f9=%22S%C3%AD%2C%20confirmo%20mi%20participaci%C3%B3n%22',
+        '_blank'
+    );
+
+    // Intentar cerrar la ventana actual
+    setTimeout(() => {
+        window.open('', '_self');
+        window.close();
+    }, 300);
+}
+</script>
+
 
         </div>
 
@@ -277,4 +293,5 @@
     </script>
 </body>
 </html>
+
 
